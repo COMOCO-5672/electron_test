@@ -7,13 +7,14 @@
     
     function createWindow () {
       // 创建浏览器窗口。
-      win = new BrowserWindow({width: 800, height: 60})
+      win = new BrowserWindow({width: 800, useContentSize:true, height: 600, frame: false})
     
       // 然后加载应用的 index.html。
-      win.loadFile('index.html')
+      //win.loadFile('index.html')
+      win.loadURL("http://www.baidu.com")
     
       // 打开开发者工具
-      win.webContents.openDevTools()
+      //win.webContents.openDevTools()
     
       // 当 window 被关闭，这个事件会被触发。
       win.on('closed', () => {
